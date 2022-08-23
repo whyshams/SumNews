@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.menu{
+    height: 100vh;
+    overflow: auto;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+    background: black;
+    z-index: 100;
+    animation-name: example;
+    
+}
+.sumInput{
+    height: 100vh;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+    animation-name: example;
+}
+.SumInput {
+    width: 300px;
+    height:40px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.Nav{
+    animation-name: example;
+    animation-duration: 1000ms;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+
+}
+
+ .page-link{
+    background: black;
+    color: white;
+    width:20px;
+    margin: 5px;
+
+}
+.page-link-active{
+    background:white !important;
+    color: black !important;
+    text-decoration: none !important;
+    padding: 2px !important;
+
+}
+.banglaIcon {
+    font-size: 20px;
+    color: white;
+}
+.banglaIconActive {
+    color: white;
+}
+.banglaBtn{
+    background: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.catImage{
+    
+    margin-top: 50px;
+}
+.catSrcImage{
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.nav-button {
+    
+    text-decoration: none;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+    background-color: black;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    
+}
+.nav-button-active {
+    text-decoration: none;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    color: black;
+    background-color: white;
+    animation-name: example;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    cursor: pointer;
+    
+
+}
+.intMedia{
+    font-size: 13px;
+    margin-left: 20px;
+}
+.nationalImage{
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.card{
+    
+    margin-top: 70px;
+    animation-name: example;
+    animation-timing-function: ease-out;
+    animation-duration: 1000ms;
+    animation-direction: normal;
+    border-radius: 20px;
+    background: white ;
+    box-shadow:  20px 20px 52px #aaaaaa,
+                 -20px -20px 52px #ffffff; 
+}
+.content{
+    margin: 20px;
+    animation-name: content;
+    animation-timing-function: ease-in;
+    animation-duration: 1000ms;
+    animation-direction: normal;
+    
+
+}
+.bdIntImage{
+    height: auto;
+    width: 100%;
+}
+.bdIntSrclogo {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+.bdIntSource{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.bdNatSecond {
+    margin-top: 60px;
+    animation-name: example;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+}
+.bdNatCopy a{
+    margin-left: 20px;
+}
+.nationalContent {
+    margin: 20px;
+}
+.nationalContent{
+    animation-name: content;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+}
+.WorldImage {
+    height: 170px;
+    width: 245px;
+}
+
+.CopyButton{
+    background-color: black !important;
+    color: white !important;
+    padding: 10px !important;
+    letter-spacing: 2px !important;
+    border-radius: 20px !important;
+}
+
+.SelectOption {
+    width: 300px;
+}
+.copyLink{
+    text-decoration: none;
+    color: white;
+}
+.nav-button a{
+    margin-left: 20px;
+    padding-top: 60px ;
+}
+#nprogress .bar {
+    height :5px;
+    background: black;
+    border-radius: 50px ;
+
+    
+}
+#nprogress .peg{
+    box-shadow: none;
+}
+#nprogress .spinner-icon {
+  display: none;
+}
+
+.banglaIcon {
+    height: 35px;
+    width: 35px;
+  
+}
+
+.BanglaIconDiv {
+    background-color: white;
+    border-radius: 50%;
+}
+.loading{
+    height: 90vh;
+    overflow: hidden;
+
+  
+    
+}
+.navIconNat {
+    margin-left: 50%;
+}
+.multi-ripple {
+    width: 5.2rem;
+    height: 5.2rem;
+    margin: 2rem;
+    
+  
+   
+  }
+ .multi-ripple div {
+    position: absolute;
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    border: 0.3rem solid black ;
+    animation: 1.5s ripple infinite;
+   
+
+   
+  }
+  .multi-ripple div:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .submenu {
+    animation-name: example;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    
+    animation-direction: normal;
+  }
+  .submenu2{
+    animation-name: example;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    
+    animation-direction: normal;
+
+  }
+  @keyframes example {
+    from {margin-left: -500px; opacity: 0;}
+    to {margin-left: 0; opacity: 1;}
+  }
+  @keyframes moveRight {
+    from {margin-right: 500px;}
+    to {margin-right: 0; }
+    
+  }
+  @keyframes visibility {
+    from{visibility: hidden;}
+    to{visibility: visible;}
+    
+  }
+  @keyframes content {
+    from{opacity: 0;}
+    to{opacity: 1;}
+    
+  }
+  @keyframes ripple {
+    from {
+      transform: scale(0);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+
+  
+
+@media only screen and (max-width: 600px) {
+    .nav-button{
+        margin: 0;
+        margin-top: 40px;
+        margin-right: 10px;
+        color: white;
+    background-color:black;
+    border-bottom: 1px solid white;
+    }
+    .nav-button-active {
+        margin: 0;
+        margin-top: 40px;
+        padding: 3px;
+        color:black;
+        background-color: white;
+    }
+   
+    .nav-button a{
+        margin: 0;
+        font-size: 8px;
+        font-weight: bold;
+    }
+    .nav-button-active a{
+        margin: 0;
+        font-size: 8px;
+        font-weight: bold;
+        animation-name: visibility;
+        animation-duration: 1000ms;
+        
+    }
+    .intMedia{
+        font-size: 6px;
+    }
+    .multi-ripple {
+        width: 3.6rem;
+    height: 3.6rem;
+    }
+    .multi-ripple div{
+        width: 3rem;
+    height: 3rem;
+    }
+    .CopyButton{
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+   .bdIntTitle {
+    font-size : 20px;
+    font-weight: bolder;
+   }
+   .bdIntDesc{
+    font-size: 13px;
+   }
+   .bdNatCopy a{
+    margin-left: 0px;
+}
+.nationalImage{
+    margin-left: 0;
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+}
+.nationalContent {
+    margin: 0;
+    margin-top: 10px;
+}
+.nationalTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+.nationalSummary {
+    font-size: 15px;
+    font-style: italic;
+
+}
+.SelectOption {
+    width: 200px;
+    border: 1px solid black;
+}
+
+.SubmitButton {
+    margin-left: 0;
+}
+.OptionTitle{
+    font-size: 6px;
+}
+.SumInput{
+    width: 250px;
+    font-size: 13px;
+}
+.navIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+.navIconNat{
+    margin-left: 25px;
+}
+    
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .arrows {
+	width: 30px;
+	height: 36px;
+	
+}
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 2px;	
+	animation: arrow 2s forwards;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}

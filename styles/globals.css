@@ -343,9 +343,9 @@ body{
     height: 3rem;
     }
     .CopyButton{
-        font-size: 10px;
-        font-weight: bold;
-        margin-top: 10px;
+        font-size: 10px !important;
+        font-weight: bold !important;
+        margin-top: 10px !important;
     }
    .bdIntTitle {
     font-size : 20px;

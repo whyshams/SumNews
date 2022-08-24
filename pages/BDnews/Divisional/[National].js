@@ -195,7 +195,7 @@ export async function getServerSideProps(context) {
         lang: 'en',
         sort_by: 'date',
         country: 'BD',
-        sources: 'dhakatribune.com,thedailystar.net,tbsnews.net,newagebd.net,thefinancialexpress.com.bd,daily-sun.com,observerbd.com,bdnews24.com,business-standard.com,risingbd.com,prothomalo.com',
+        sources: 'dhakatribune.com,thedailystar.net,tbsnews.net,newagebd.net,thefinancialexpress.com.bd,daily-sun.com,observerbd.com,bdnews24.com,business-standard.com,risingbd.com,prothomalo.com,dhakapost.com',
         
         media: 'True'
       },

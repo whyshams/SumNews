@@ -87,18 +87,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           </div>
     </div>
     <div className='card'>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossorigin="anonymous"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5159189580385319"
-     data-ad-slot="6944782062"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    
         <hr/>
       </div>
        
@@ -110,6 +99,18 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         {
     paginatedData.map((data)=>(
       <div key={data.title} className='card col-12'>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="6944782062"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         <div  className='row col-md-12 '>
         <div className='col-md-4 col-12'>
           

@@ -60,7 +60,7 @@ const Layout = ({children}) => {
           
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossOrigin="anonymous"/>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
       </Head>
       <div className="row d-flex col-md-12 col-12">
         

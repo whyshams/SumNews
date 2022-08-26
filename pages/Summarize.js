@@ -19,7 +19,7 @@ const Summarize = () => {
             url : "https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-url/",
             headers: {
               'content-type': 'application/json',
-              'X-RapidAPI-Key': '5602d81b14msh7a9474391141e07p1e6a11jsnaa55af70167d',
+              'X-RapidAPI-Key': '91e78a74ccmsh7e51ffc1bd6019ep1d690ajsn8567c628fd59',
               'X-RapidAPI-Host': 'tldrthis.p.rapidapi.com'
               },
             data: `{"url":"${sumInput}","min_length":100,"max_length":300,"is_detailed":true}`

@@ -5,6 +5,7 @@ import moment from 'moment';
 import { useRouter } from 'next/dist/client/router';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Pagination from '../../Components/Pagination';
+import Head from 'next/head';
 
 
 const International = ({Data}) => {
@@ -31,6 +32,14 @@ console.log(paginatedData)
 
   return (
     <div className='scroll'>
+       <Head>
+      <title>BD News || International </title>
+      <meta name="description" content="Get the latest news of Bangladesh from the reputed News Journals around the world and summarize them in seconds with our summarizer tool.."/>
+      <meta name="keywords" content="Bangladesh news, Bangla News,BD News,NewsBd,bangladesh english news, bangladesh english newspaper,english newspaper bangladesh,summary,summarize news,all bangladesh english news,bangladesh international news"/>
+      <meta name="author" content="Nuren Shams Chowdhury"/>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossOrigin="anonymous"></script>
+      </Head>
        <div className='row'>
         <div className='card col-md-12'> 
         <div className='MainPageTitle'>

@@ -5,7 +5,9 @@ body{
     background-color: white;
     font-family: 'Poppins', sans-serif;
 }
-
+.Home{
+    height: 100vh;
+}
 
 
 .menu{
@@ -192,7 +194,7 @@ body{
     text-decoration: none;
     color: white;
 }
-.nav-button a{
+.nav-button span{
     margin-left: 20px;
     padding-top: 60px ;
 }
@@ -318,12 +320,12 @@ body{
         background-color: white;
     }
    
-    .nav-button a{
+    .nav-button span{
         margin: 0;
         font-size: 8px;
         font-weight: bold;
     }
-    .nav-button-active a{
+    .nav-button-active span{
         margin: 0;
         font-size: 8px;
         font-weight: bold;

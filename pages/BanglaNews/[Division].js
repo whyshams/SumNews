@@ -5,6 +5,8 @@ import axios from 'axios';
 import moment from 'moment';
 import {FaAngleDown} from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import Head from 'next/head';
+
 
 
 
@@ -41,6 +43,14 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <div>
+      <Head>
+        <title>বাংলা সংবাদ </title>
+        <meta name="description" content="বিভাগ অনুযায়ী বাংলাদেশের প্রত্যেক দৈনিক পত্রিকা এবং অনলাইন পত্রিকার সর্বশেষ বাংলা সংবাদ"/>
+        <meta name="keywords" content="Bangla News,Bd News,Bd,Bangladesh News,Divisional Bangla News,Bangla,News,সংবাদ, বাংলা সংবাদ,বিভাগীয় সংবাদ, বাংলাদেশ,বাংলাদেশ সংবাদ"/>
+        <meta name="author" content="Nuren Shams Chowdhury"/>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+         crossOrigin="anonymous"></script>
+      </Head>
       <div className='row'>
         <div className='card col-md-12'> 
         <div className='MainPageTitle'>
@@ -50,6 +60,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         </div>
         </div>
       </div>
+      <section>
       <div className='bdCatFirstPart card'>
       <div className='row'>
             <div className='col-md-12'>
@@ -86,91 +97,97 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
     
           </div>
     </div>
+
+      </section>
+     
     <div className='card'>
     
         <hr/>
       </div>
-       
-        <div className='second'>
+       <section>
+       <div className='second'>
           
-        <div>
-        <div>
+          <div>
+          <div>
+              
+          {
+      paginatedData.map((data)=>(
+        <div key={data.title} className='card col-12'>
+          
+          <div  className='row col-md-12 '>
+          <div className='col-md-4 col-12'>
             
-        {
-    paginatedData.map((data)=>(
-      <div key={data.title} className='card col-12'>
-        
-        <div  className='row col-md-12 '>
-        <div className='col-md-4 col-12'>
-          
-          <img className='rounded nationalImage ' src={data.media}/>
-
-        </div>
-        <div className='col-md-8 '>
-        <div className='col-12 nationalContent'>
-          <h3 className='nationalTitle mb-2 d-flex justify-content-center align-items-center'>{data.title}</h3>
-          
-          
-          
-             <div><p className='nationalSummary'><strong>Description :</strong> {data.summary.split(" ").splice(0,40).join(" ")}</p></div>
-          
-          
-          
-
-          <div className='d-block'>
-            <h5 className='  d-flex justify-content-center align-items-center' >{moment(data.published_date).fromNow()}</h5> 
-            <div className=' d-flex justify-content-center align-items-center'>
-            <h6 >by </h6>
-
-            </div>
-            <div className='d-flex justify-content-center align-items-center'>
-            <p>{data.rights.toUpperCase()}</p>
-            </div>
+            <img className='rounded nationalImage ' src={data.media} alt={data.title}/>
+  
           </div>
-           
-          
-          <div className='row'>
-                                      
-                                      
-                                      
-                                 
-                              <div className=' col-12 col-md-12 d-flex d-md-flex justify-content-center'>
-                              <a target="_blank" rel="noreferrer" className=' btn  CopyButton mx-2 px-5' href={data.link}>Go To Link</a>
-
-
-                              </div>
-                               </div>
-
-        <hr/>
-
+          <div className='col-md-8 '>
+          <div className='col-12 nationalContent'>
+            <h3 className='nationalTitle mb-2 d-flex justify-content-center align-items-center'>{data.title}</h3>
+            
+            
+            
+               <div><p className='nationalSummary'><strong>Description :</strong> {data.summary.split(" ").splice(0,40).join(" ")}</p></div>
+            
+            
+            
+  
+            <div className='d-block'>
+              <h5 className='  d-flex justify-content-center align-items-center' >{moment(data.published_date).fromNow()}</h5> 
+              <div className=' d-flex justify-content-center align-items-center'>
+              <h6 >by </h6>
+  
+              </div>
+              <div className='d-flex justify-content-center align-items-center'>
+              <p>{data.rights.toUpperCase()}</p>
+              </div>
+            </div>
+             
+            
+            <div className='row'>
+                                        
+                                        
+                                        
+                                   
+                                <div className=' col-12 col-md-12 d-flex d-md-flex justify-content-center'>
+                                <a target="_blank" rel="noreferrer" className=' btn  CopyButton mx-2 px-5' href={data.link}>Go To Link</a>
+  
+  
+                                </div>
+                                 </div>
+  
+          <hr/>
+  
+            </div>
+  
+  
           </div>
-
-
+  
+  </div>
+  
         </div>
-
-</div>
-
-      </div>
-      
         
+          
+         
+      ))}
+          </div>
+          <div className='col-md-12'>
+                          <div className='pagination d-flex justify-content-center mt-3 align-items-center'>
+                  <Pagination
+                       postsPerPage={postsPerPage}
+                        totalPosts={Data.length}
+                        paginate={paginate}
+                    />
+  
+                  </div>
+  
+                          </div>
        
-    ))}
-        </div>
-        <div className='col-md-12'>
-                        <div className='pagination d-flex justify-content-center mt-3 align-items-center'>
-                <Pagination
-                     postsPerPage={postsPerPage}
-                      totalPosts={Data.length}
-                      paginate={paginate}
-                  />
+          </div>
+  
+          </div>
 
-                </div>
-
-                        </div>
-     
-        </div>
-
-        </div>
+       </section>
+       
 
     </div>
   )

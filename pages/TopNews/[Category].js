@@ -7,9 +7,10 @@ import { useRouter } from 'next/router';
 import Pagination from '../../Components/Pagination';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'next/image';
+
 import {FaAngleDown} from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import Head from 'next/head';
 
 
 
@@ -46,7 +47,14 @@ console.log(paginatedData)
 
   return (
     <div>
-
+      <Head>
+        <title>World News</title>
+        <meta name="description" content="Get the latest news around the World according to your category choice and summarize them in seconds with our summarizer tool.."/>
+        <meta name="keywords" content="World News, current news, news, category, sumnews,sumnewsbd" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossOrigin="anonymous"></script>
+      </Head>
+        <section>
         <div className='firtpart card'>
             <div className='row m-2'>
             <div className='col-md-12'>
@@ -87,10 +95,13 @@ console.log(paginatedData)
       </div>
             </div>
         </div>
+
+        </section>
+        
         <div className='card'>
         <hr/>
       </div>
-        <div className=''>
+        <section>
         <div className=''>
 
           {paginatedData ? 
@@ -195,7 +206,7 @@ console.log(paginatedData)
             
 
       </div>
-        </div>
+        </section>
 
 
     </div>

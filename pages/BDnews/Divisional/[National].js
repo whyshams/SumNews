@@ -7,6 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Pagination from '../../../Components/Pagination';
 import {FaAngleDown} from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import Head from 'next/head';
 
 
 
@@ -43,6 +44,14 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <div>
+       <Head>
+      <title>BD News || Divisional </title>
+      <meta name="description" content="Get Division wise News Of Bangladesh from the reputed English Newspaper of the country and summarize them in seconds with our summarizer tool..."/>
+      <meta name="keywords" content="Bangladesh news,Bangladesh division news,bd division news, Bangla News,BD News,NewsBd,bangladesh english news, bangladesh english newspaper,english newspaper bangladesh,summary,summarize news,all bangladesh english news"/>
+      <meta name="author" content="Nuren Shams Chowdhury"/>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossOrigin="anonymous"></script>
+      </Head>
        <div className='row'>
         <div className='card col-md-12'> 
         <div className='MainPageTitle'>

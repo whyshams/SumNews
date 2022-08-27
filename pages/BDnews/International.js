@@ -16,8 +16,9 @@ const International = ({Data}) => {
     const router = useRouter()
 
     const handleCopy = () => {
-      setCopied(true);
+      
       router.push('/Summarize')
+      setCopied(true)
     }
     {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
@@ -94,7 +95,7 @@ console.log(paginatedData)
                                       
                                       <CopyToClipboard text={data.url} onCopy={handleCopy}>
                                         <div className='col-12 col-md-6 d-md-flex d-flex justify-content-center'>
-                                        <button onClick={() => setSumText(data.url)} className='CopyButton btn d-flex  mx-2 px-5'>Copy Link to Summarize</button>
+                                        <button onClick={() => {setSumText(data.url) ; setCopied(true)}} className='CopyButton btn d-flex  mx-2 px-5'>Copy Link to Summarize</button>
                                         </div>
     
                                         </CopyToClipboard>

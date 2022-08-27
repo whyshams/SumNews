@@ -24,10 +24,11 @@ const Category= ({Data}) => {
 
     }
     const handleCopy = () => {
-      setCopied(true)
+      
       router.push('/Summarize')
       
     }
+    
 
     setBdNewsDataCat(Data);
 
@@ -145,7 +146,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                                       
                                       <CopyToClipboard text={data.link} onCopy={handleCopy}>
                                         <div className='col-12 col-md-6 d-md-flex d-flex justify-content-center'>
-                                        <button onClick={() => setSumText(data.link)} className='btn d-flex CopyButton mx-2 px-5'>Copy Link to Summarize</button>
+                                        <button onClick={() => {setSumText(data.link); setCopied(true) }} className='btn d-flex CopyButton mx-2 px-5'>Copy Link to Summarize</button>
                                         </div>
     
                                         </CopyToClipboard>

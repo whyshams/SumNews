@@ -17,8 +17,9 @@ export default function ResultContextProvider  ({children})  {
     const [sumData, setSumData] = useState();
     const [sumInput,setSumInput] = useState('');
     const [sumText,setSumText] = useState('');
+    const [sumError, setSumError] = useState(false)
 
-    
+    const [Loading, setLoading] = useState(false)
 
 
     const [copied, setCopied] = useState(false);
@@ -28,6 +29,7 @@ export default function ResultContextProvider  ({children})  {
      
     useEffect(() => {
       const getData = async () => {
+        setLoading(true)
         await axios.request(
            {
              method: 'POST',
@@ -38,7 +40,7 @@ export default function ResultContextProvider  ({children})  {
                'X-RapidAPI-Host': 'tldrthis.p.rapidapi.com'
                },
              data: `{"url":"${sumInput}","min_length":100,"max_length":300,"is_detailed":true}`
-         }).then((response)=>setSumData(response.data)).catch(err => console.log(err))
+         }).then((response)=>setSumData(response.data)).catch(err => setSumError(true)).finally(() => setLoading(false))
  
        }
       if(sumInput !== ''){
@@ -54,7 +56,7 @@ export default function ResultContextProvider  ({children})  {
 
 
   return (
-    <ResultContext.Provider value={{bdNewsData,setBdNewsData,bdNewsDataDiv,setBdNewsDataDiv,catData,setCatData,sumData, setSumData,sumInput,setSumInput,sumText,setSumText,copied,setCopied,bdNewsDataCat, setBdNewsDataCat}}>
+    <ResultContext.Provider value={{Loading,setLoading,sumError,bdNewsData,setBdNewsData,bdNewsDataDiv,setBdNewsDataDiv,catData,setCatData,sumData, setSumData,sumInput,setSumInput,sumText,setSumText,copied,setCopied,bdNewsDataCat, setBdNewsDataCat}}>
           {children}
         </ResultContext.Provider>
   )

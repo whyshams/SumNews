@@ -1,23 +1,24 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useResultContext } from './Contexts/ResultContextProvider';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
-import axios from 'axios';
+
 
 
 const Summarize = () => {
-    const {sumData,setSumInput,sumText,setSumText} = useResultContext();
+    const {sumData,setSumInput,sumText,setSumText,Loading,sumError} = useResultContext();
 
     
    
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSumInput(sumText)
+        setSumInput(sumText);
+        setSumText('')
       }
 
      
-      
+  
       
     
       return (
@@ -34,36 +35,41 @@ const Summarize = () => {
           <div className='sumInput justify-content-center align-items-center d-flex'>
             <div className='justify-content-center align-items-center d-flex'>
             <div className='col-12 d-block ' >
+             
               
                     <form onSubmit={handleSubmit} >
                       <div className=' '>
                 <input className='SumInput' placeholder='Input LINK for Summarization...' type="text" value={sumText} onChange={(e)=>setSumText(e.target.value)} />
-
-
                       </div>
                       <div className=' '>
                 <button  type='submit' className='btn CopyButton'>Submit</button>
-
-                        
-                        </div>
+                      </div>
             </form>
-    
-                    </div>
-
-            </div>
-         
-    
-          </div>
+     </div>
+ </div>
+</div>
     
     
           <div className='sumResult'>
           <div >
+            {
+              sumError && <h4>Sorry, Could not generate summary... Try again with another Link</h4>
+            }
+                {
+                  Loading && <div className='d-flex justify-content-center align-items-center'>
+                  <div className="multi-ripple">
+                  <div></div>
+                  <div></div>
+                </div>
+                </div>
+                }
                 {
                   sumData ? <div>
                    
                     <div className=' col-md-12'>
                       
                       <div className='d-block card'>
+                        <div className='nationalContent'>
                         <h2 className='sumTitle d-flex justify-content-center align-items-center'>{sumData.article_title}</h2>
                         <div className='m-2 d-flex justify-content-center align-items-center'>
                           <img className='sumImage rounded' src={sumData.article_image} alt={sumData.article_title}/>
@@ -79,6 +85,9 @@ const Summarize = () => {
                     }
 
                         </div>
+
+                        </div>
+                       
                       </div>
                       
 

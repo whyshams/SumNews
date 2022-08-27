@@ -8,7 +8,14 @@ body{
 .Home{
     height: 100vh;
 }
-
+.bdCatSecondPart{
+    background: white;
+    z-index: 10000;
+}
+.paraGraph{
+    font-size: 18px;
+    font-weight: 500;
+}
 
 .menu{
     height: 100vh;
@@ -22,11 +29,21 @@ body{
     
 }
 .sumInput{
-    height: 100vh;
+    height: 30vh;
+    overflow: auto;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top:0;
     animation-name: example;
+
+}
+
+.sumResult{
+    z-index: 10000000;
+    background: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    
 }
 .SumInput {
     width: 300px;
@@ -133,6 +150,41 @@ body{
     background: white ;
     box-shadow:  20px 20px 52px #aaaaaa,
                  -20px -20px 52px #ffffff; 
+}
+.sumImage {
+    height: 60%;
+    width: 80%;
+    margin-top: 20px;
+}
+.summary{
+    margin: 20px;
+}
+.summary1{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 22px;
+}
+.summary2{
+    font-size: 20px;
+    font-weight: 700;
+}
+.intruSum2{
+
+    margin-top: 20px;
+}
+.intruSum1{
+    
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+
+}
+.sumTitle{
+    margin-top: 40px;
+    font-weight: bold;
+    text-transform:uppercase;
+    margin-bottom: 20px;
 }
 .content{
     margin: 20px;
@@ -393,6 +445,27 @@ body{
     width: 250px;
     font-size: 13px;
 }
+.sumResult{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.sumTitle{
+    font-size: 21px;
+    margin: 8px;
+}
+.summary {
+    margin: 5px;
+}
+.summary1{
+    font-size: 18px;
+}
+.summary2{
+    font-size: 16px;
+}
+.sumImage{
+    height: auto;
+    width: 100%;
+}
 .navIcon {
     display: flex;
     justify-content: center;
@@ -402,7 +475,21 @@ body{
 .navIconNat{
     margin-left: 25px;
 }
+.intruSum2{
+    font-size: 11px;
+    margin-top: 10px;
+}
+.intruSum1{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+
+}
+.paraGraph{
+    font-size: 15px;
     
+}
     
   }
 

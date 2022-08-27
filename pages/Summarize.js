@@ -1,51 +1,47 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import { useResultContext } from './Contexts/ResultContextProvider';
-import axios from 'axios';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Head from 'next/head';
 
 
 const Summarize = () => {
-    const {sumData, setSumData,sumInput,setSumInput,sumText,setSumText} = useResultContext();
+    const {sumData,setSumInput,sumText,setSumText,sumInput,copied} = useResultContext();
 
+
+   
     const handleSubmit = (e) => {
         e.preventDefault();
         setSumInput(sumText)
       }
 
-      const getData = async () => {
-        const res = await axios.request(
-          {
-            method: 'POST',
-            url : "https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-url/",
-            headers: {
-              'content-type': 'application/json',
-              'X-RapidAPI-Key': '91e78a74ccmsh7e51ffc1bd6019ep1d690ajsn8567c628fd59',
-              'X-RapidAPI-Host': 'tldrthis.p.rapidapi.com'
-              },
-            data: `{"url":"${sumInput}","min_length":100,"max_length":300,"is_detailed":true}`
-        })
-        setSumData(res)
-      }
-    
-      useEffect(() => {
-            getData();
-        },[sumInput])
+     
       
-      
+      console.log(sumData)
     
       return (
         <div>
+          <Head>
+            <title>Summarizer Tool</title>
+            <meta name='description' content='Copy and Paste any English news or article link and summarize the whole article into 3-4 lines in seconds...' />
+            <meta name='keywords' content='summarizer,summarize,news summarize,summarize news,summarizer tool,summarizer app,article summarize,article,summarization,summary,news summary' />
+            <meta name="author" content="Nuren Shams Chowdhury"/>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossOrigin="anonymous"></script>
+          </Head>
+
           <div className='sumInput justify-content-center align-items-center d-flex'>
             <div className='justify-content-center align-items-center d-flex'>
             <div className='col-12 d-block ' >
-                    <form className='  ' onSubmit={handleSubmit}>
+              
+                    <form onSubmit={handleSubmit} >
                       <div className=' '>
                 <input className='SumInput' placeholder='Input LINK for Summarization...' type="text" value={sumText} onChange={(e)=>setSumText(e.target.value)} />
 
 
                       </div>
                       <div className=' '>
-                <button type='submit' className='btn CopyButton'>Submit</button>
+                <button  type='submit' className='btn CopyButton'>Submit</button>
 
                         
                         </div>
@@ -59,12 +55,39 @@ const Summarize = () => {
           </div>
     
     
-          <div className='results'>
+          <div className='sumResult'>
           <div >
-                
-            {
-                sumData && <div><h4>{sumData.data.summary}</h4></div>
-            }
+                {
+                  sumData ? <div>
+                   
+                    <div className=' col-md-12'>
+                      
+                      <div className='d-block card'>
+                        <h2 className='sumTitle d-flex justify-content-center align-items-center'>{sumData.article_title}</h2>
+                        <div className='m-2 d-flex justify-content-center align-items-center'>
+                          <img className='sumImage rounded' src={sumData.article_image} alt={sumData.article_title}/>
+                        </div>
+                        <div className=' summary d-flex justify-content-center align-items-center'>
+                        {
+                      sumData.summary.map(dat => (
+                        <div key={dat}>
+                          <h4 className='summary1 d-flex justify-content-center align-items-center'>Summary : </h4>
+                        <p className='summary2 d-flex justify-content-center align-items-center'>{dat}</p>
+                        </div>
+                      ))
+                    }
+
+                        </div>
+                      </div>
+                      
+
+                    </div>
+                  </div> : <div className='instruSum '>
+                   <div className='intruSum1 d-flex justify-content-center align-items-center'>paste any english news or article Link in that input field and submit</div> 
+                   <div className='intruSum2 d-flex justify-content-center align-items-center'>Wait 2-3 seconds after submitting</div>
+                    </div>
+                }
+           
     
             </div>
     

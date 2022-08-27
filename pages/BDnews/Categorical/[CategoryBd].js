@@ -15,7 +15,7 @@ import Head from 'next/head';
 
 
 const Category= ({Data}) => {
-    const {bdNewsDataCat, setBdNewsDataCat} = useResultContext();
+    const {bdNewsDataCat, setBdNewsDataCat,setCopied,setSumText} = useResultContext();
     const [bdCat,setBdCat] = useState('news');
     const router = useRouter();
     const handleSubmit = (e) => {
@@ -24,8 +24,9 @@ const Category= ({Data}) => {
 
     }
     const handleCopy = () => {
-      setCopied(true);
+      setCopied(true)
       router.push('/Summarize')
+      
     }
 
     setBdNewsDataCat(Data);
@@ -51,7 +52,8 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
       </Head>
-       <div className='row'>
+      <div className='selectSticky'>
+      <div className='row '>
         <div className='card col-md-12'> 
         <div className='MainPageTitle'>
           <h2 className='m-3 d-flex justify-content-center align-items-center'>
@@ -100,9 +102,14 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       
             </div>
       </div>
+      
+
+      </div>
       <div className='card'>
         <hr/>
       </div>
+      
+      
      
       <div className='bdCatSecondPart'>
         <div className='row'>
@@ -118,18 +125,18 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         </div>
         <div className='col-md-8 '>
         <div className='col-12 nationalContent'>
-          <h3 className='nationalTitle mb-2 d-flex justify-content-center align-items-center'>{data.title}</h3>
+          <h3 className='sumTitle mb-2 d-flex justify-content-center align-items-center'>{data.title}</h3>
           
-          <div><p className='nationalSummary'><strong>Summary :</strong> {data.summary}</p></div>
+          <div><p className='summary1 m-2'>Summary :</p><p className='paraGraph m-1'> {data.summary}</p></div>
 
-          <div className='d-block'>
-            <h5 className='  d-flex justify-content-center align-items-center' >{moment(data.published_date).fromNow()}</h5> 
+          <div className='d-block m-2'>
+            <h5 className='m-2 paraGraph  d-flex justify-content-center align-items-center' >{moment(data.published_date).fromNow()}</h5> 
             <div className=' d-flex justify-content-center align-items-center'>
             <h6 >by </h6>
 
             </div>
             <div className='d-flex justify-content-center align-items-center'>
-            <p>{data.rights.toUpperCase()}</p>
+            <p className='summary1'>{data.rights.toUpperCase()}</p>
             </div>
           </div>
            

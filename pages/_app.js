@@ -6,11 +6,13 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return(
-    <ResultContextProvider>
       <Layout>
+    <ResultContextProvider>
+
         <Component {...pageProps} />
-      </Layout>
     </ResultContextProvider>
+
+      </Layout>
      
   
 

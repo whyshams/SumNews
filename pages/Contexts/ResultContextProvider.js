@@ -28,20 +28,24 @@ export default function ResultContextProvider  ({children})  {
      
     useEffect(() => {
       const getData = async () => {
-       await axios.request(
-          {
-            method: 'POST',
-            url : "https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-url/",
-            headers: {
-              'content-type': 'application/json',
-              'X-RapidAPI-Key': 'fffe31e05amsh9923ff790f0b752p11d51ajsn80d6db57d239',
-              'X-RapidAPI-Host': 'tldrthis.p.rapidapi.com'
-              },
-            data: `{"url":"${sumInput}","min_length":100,"max_length":300,"is_detailed":true}`
-        }).then((response)=>setSumData(response.data)).catch(err => console.log(err))
-
-      }
+        await axios.request(
+           {
+             method: 'POST',
+             url : "https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-url/",
+             headers: {
+               'content-type': 'application/json',
+               'X-RapidAPI-Key': 'fffe31e05amsh9923ff790f0b752p11d51ajsn80d6db57d239',
+               'X-RapidAPI-Host': 'tldrthis.p.rapidapi.com'
+               },
+             data: `{"url":"${sumInput}","min_length":100,"max_length":300,"is_detailed":true}`
+         }).then((response)=>setSumData(response.data)).catch(err => console.log(err))
+ 
+       }
+      if(sumInput !== ''){
       getData();
+        
+      }
+    
      
       },[sumInput])
     

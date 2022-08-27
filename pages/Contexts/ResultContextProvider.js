@@ -25,6 +25,7 @@ export default function ResultContextProvider  ({children})  {
 
 
  
+     
     useEffect(() => {
       const getData = async () => {
        await axios.request(
@@ -33,7 +34,7 @@ export default function ResultContextProvider  ({children})  {
             url : "https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-url/",
             headers: {
               'content-type': 'application/json',
-              'X-RapidAPI-Key': '8cf9a1f233msh0141a5b99787542p18d85ajsn9fde2eae0cd9',
+              'X-RapidAPI-Key': 'fffe31e05amsh9923ff790f0b752p11d51ajsn80d6db57d239',
               'X-RapidAPI-Host': 'tldrthis.p.rapidapi.com'
               },
             data: `{"url":"${sumInput}","min_length":100,"max_length":300,"is_detailed":true}`
@@ -43,6 +44,9 @@ export default function ResultContextProvider  ({children})  {
       getData();
      
       },[sumInput])
+    
+    
+    
 
 
   return (

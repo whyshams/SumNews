@@ -3,12 +3,13 @@ import { useResultContext } from './Contexts/ResultContextProvider';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
+import axios from 'axios';
 
 
 const Summarize = () => {
-    const {sumData,setSumInput,sumText,setSumText,sumInput,copied} = useResultContext();
+    const {sumData,setSumInput,sumText,setSumText} = useResultContext();
 
-
+    
    
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,7 +18,7 @@ const Summarize = () => {
 
      
       
-      console.log(sumData)
+      
     
       return (
         <div>
@@ -97,3 +98,4 @@ const Summarize = () => {
 }
 
 export default Summarize
+

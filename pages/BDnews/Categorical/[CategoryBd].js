@@ -120,7 +120,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
-      <ins class="adsbygoogle"
+      <ins className="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5159189580385319"
      data-ad-slot="2556220158"

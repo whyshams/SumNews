@@ -52,6 +52,8 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <meta name="author" content="Nuren Shams Chowdhury"/>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossOrigin="anonymous"></script>
       </Head>
       <div className='selectSticky'>
       <div className='row '>
@@ -118,6 +120,15 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
+      <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="2556220158"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
       
       
       

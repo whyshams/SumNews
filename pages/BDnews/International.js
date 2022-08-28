@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { useResultContext } from '../Contexts/ResultContextProvider';
 import axios from 'axios';
 import moment from 'moment';
@@ -20,6 +20,15 @@ const International = ({Data}) => {
       router.push('/Summarize')
       setCopied(true)
     }
+
+    useEffect(() => {
+      var ads = document.getElementsByClassName("adsbygoogle").length;
+      for (var i = 0; i < ads; i++) {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) { }
+      }
+}, []);
     {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
 const [postsPerPage] = useState(8);
@@ -38,8 +47,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <meta name="description" content="Get the latest news of Bangladesh from the reputed News Journals around the world and summarize them in seconds with our summarizer tool.."/>
       <meta name="keywords" content="Bangladesh news, Bangla News,BD News,NewsBd,bangladesh english news, bangladesh english newspaper,english newspaper bangladesh,summary,summarize news,all bangladesh english news,bangladesh international news"/>
       <meta name="author" content="Nuren Shams Chowdhury"/>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
+      
       </Head>
        <div className='row intmain '>
         <div className=' '> 
@@ -135,6 +143,13 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                         </div>
                          
                         ))}
+                         <div className='ads'>
+          <ins class="adsbygoogle"
+            style="display:block"
+             data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-5159189580385319"
+           data-ad-slot="8510458257"></ins>
+          </div>
                         <div className=''>
                         <div className='pagination d-flex flex-wrap justify-content-center mt-3 align-items-center'>
                                   <Pagination

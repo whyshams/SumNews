@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { useRouter } from 'next/router';
@@ -32,6 +32,14 @@ const Category= ({Data,CategoryBd}) => {
 
     setBdNewsDataCat(Data);
 
+    useEffect(() => {
+      var ads = document.getElementsByClassName("adsbygoogle").length;
+      for (var i = 0; i < ads; i++) {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) { }
+      }
+}, []);
 
      {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
@@ -51,9 +59,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <meta name="keywords" content="Bangladesh news, Bangla News,BD News,NewsBd,bangladesh english news, bangladesh english newspaper,english newspaper bangladesh,summary,summarize news,all bangladesh english news"/>
       <meta name="author" content="Nuren Shams Chowdhury"/>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
+     crossorigin="anonymous"></script>
       </Head>
       <div className='selectSticky'>
       <div className='row '>
@@ -120,15 +126,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
-      <ins className="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5159189580385319"
-     data-ad-slot="2556220158"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+     
       
       
       
@@ -194,6 +192,13 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         
        
     ))}
+          </div>
+          <div className='ads'>
+          <ins class="adsbygoogle"
+            style="display:block"
+             data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-5159189580385319"
+           data-ad-slot="8510458257"></ins>
           </div>
           <div className='col-md-12'>
                         <div className='pagination d-flex justify-content-center mt-3 align-items-center'>

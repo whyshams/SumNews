@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 
 import { useResultContext } from '../Contexts/ResultContextProvider';
 import axios from 'axios';
@@ -31,6 +31,14 @@ const Category = ({Data,Category}) => {
       router.push('/Summarize')
     }
 
+    useEffect(() => {
+      var ads = document.getElementsByClassName("adsbygoogle").length;
+      for (var i = 0; i < ads; i++) {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) { }
+      }
+}, []);
 
     {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
@@ -52,7 +60,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         <meta name="description" content="Get the latest news around the World according to your category choice and summarize them in seconds with our summarizer tool.."/>
         <meta name="keywords" content="World News, current news, news, category, sumnews,sumnewsbd" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
+     crossorigin="anonymous"></script>
       </Head>
         <section>
         <div className='row '>
@@ -207,6 +215,13 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
              
     ))}
             </div> : <h2>Loading</h2> }
+            <div className='ads'>
+          <ins class="adsbygoogle"
+            style="display:block"
+             data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-5159189580385319"
+           data-ad-slot="8510458257"></ins>
+          </div>
             <div className='row'>
               <div className='col-md-12'>
               <div className='pagination d-flex justify-content-center align-items-center'>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Pagination from '../../Components/Pagination';
 import { useRouter } from 'next/router';
 import axios from 'axios';
@@ -27,7 +27,14 @@ const Division = ({Data,Division}) => {
 
     }
 
-
+    useEffect(() => {
+      var ads = document.getElementsByClassName("adsbygoogle").length;
+      for (var i = 0; i < ads; i++) {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) { }
+      }
+}, []);
 
 
         {/* Pagination algo*/}
@@ -49,8 +56,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         <meta name="keywords" content="Bangla News,Bd News,Bd,Bangladesh News,Divisional Bangla News,Bangla,News,সংবাদ, বাংলা সংবাদ,বিভাগীয় সংবাদ, বাংলাদেশ,বাংলাদেশ সংবাদ"/>
         <meta name="author" content="Nuren Shams Chowdhury"/>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
-     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+     crossorigin="anonymous"></script>
       </Head>
       <div className='row'>
         <div className='col-md-12'> 
@@ -113,14 +119,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
-      <amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-5159189580385319"
-     data-ad-slot="2556220158"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
+    
        <section>
        <div className='second'>
           
@@ -186,6 +185,13 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           
          
       ))}
+          </div>
+          <div className='ads'>
+          <ins class="adsbygoogle"
+            style="display:block"
+             data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-5159189580385319"
+           data-ad-slot="8510458257"></ins>
           </div>
           <div className='col-md-12'>
                           <div className='pagination d-flex justify-content-center mt-3 align-items-center'>

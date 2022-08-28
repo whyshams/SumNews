@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import moment from 'moment';
 import {useRouter} from 'next/router'
@@ -31,6 +31,15 @@ const {bdNewsDataDiv,setBdNewsDataDiv,setCopied,setSumText} = useResultContext()
     }
   
     setBdNewsDataDiv(Data)
+
+    useEffect(() => {
+      var ads = document.getElementsByClassName("adsbygoogle").length;
+      for (var i = 0; i < ads; i++) {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) { }
+      }
+}, []);
          {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
 const [postsPerPage] = useState(8);
@@ -50,7 +59,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <meta name="keywords" content="Bangladesh news,Bangladesh division news,bd division news, Bangla News,BD News,NewsBd,bangladesh english news, bangladesh english newspaper,english newspaper bangladesh,summary,summarize news,all bangladesh english news"/>
       <meta name="author" content="Nuren Shams Chowdhury"/>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
+     crossorigin="anonymous"></script>
       </Head>
       <div className=' mt-3 row '>
         <div className=' col-md-12'> 
@@ -175,6 +184,13 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         
        
     ))}
+     <div className='ads'>
+          <ins class="adsbygoogle"
+            style="display:block"
+             data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-5159189580385319"
+           data-ad-slot="8510458257"></ins>
+          </div>
    <div className='col-md-12'>
                         <div className='pagination d-flex justify-content-center mt-3 align-items-center'>
                 <Pagination

@@ -14,7 +14,7 @@ import Head from 'next/head';
 
 
 
-const Category= ({Data}) => {
+const Category= ({Data,CategoryBd}) => {
     const {bdNewsDataCat, setBdNewsDataCat,setCopied,setSumText} = useResultContext();
     const [bdCat,setBdCat] = useState('news');
     const router = useRouter();
@@ -55,9 +55,9 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </Head>
       <div className='selectSticky'>
       <div className='row '>
-        <div className='card col-md-12'> 
+        <div className=' col-md-12'> 
         <div className='MainPageTitle'>
-          <h2 className='m-3 d-flex justify-content-center align-items-center'>
+          <h2 className=' d-flex justify-content-center align-items-center'>
               News From Bangladesh National Media 
 
           </h2>
@@ -70,10 +70,10 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <div className='b-block'>
         <div className='m-2'>
         
-        <h6 className='OptionTitle d-flex justify-content-center align-items-center'>Change the category to see top news of that category</h6>
+        <h6 className='OptionTitle d-flex justify-content-center align-items-center mb-4 mt-2 '>Change the category to see top news of that category</h6>
         <form className='form-group d-flex justify-content-center align-items-center' onSubmit={handleSubmit}>
-            <label className=''>
-                Select the category   <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> 
+            <label >
+               <div className='mb-3 '>Select the category   <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> </div> 
             <select className='form-control SelectOption' value={bdCat} onChange={(e) => setBdCat(e.target.value)}>
             <option value='news'>News </option>
             
@@ -92,7 +92,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
             {/* news, sport, tech, world, finance, politics, business, economics, entertainment,beauty,travel,music,food,science */}
            
           </select>
-          <button className='CopyButton btn' type='submit'>Submit</button>
+          <button className='CopyButton btn mt-2' type='submit'>Submit</button>
           </label>
           </form>
 
@@ -106,9 +106,19 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       
 
       </div>
-      <div className='card'>
-        <hr/>
+      <div className='catNameMain'>
+      <div className=''>
+        <p className='d-flex justify-content-center align-items-center text-secondary cCat'>Current Category</p>
+        <div className='categoryName'>
+        <div className='d-flex justify-content-center align-items-center cCat2'>
+
+        <h1>{CategoryBd.toUpperCase()}</h1>
+        </div>
+       </div>
       </div>
+
+      </div>
+      
       
       
      
@@ -217,7 +227,7 @@ export async function getServerSideProps(context) {
     })
     const Data = res.data.articles;
     return{
-        props : {Data : Data},
+        props : {Data ,CategoryBd},
 
     }
 }

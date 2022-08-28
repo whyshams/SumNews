@@ -12,7 +12,7 @@ import Head from 'next/head';
 
 
 
-const National = ({Data}) => {
+const National = ({Data,National}) => {
   const router = useRouter();
 const {bdNewsDataDiv,setBdNewsDataDiv,setCopied,setSumText} = useResultContext();
 
@@ -29,7 +29,7 @@ const {bdNewsDataDiv,setBdNewsDataDiv,setCopied,setSumText} = useResultContext()
         router.push(`/BDnews/${divText}`);
         
     }
-    console.log(Data)
+  
     setBdNewsDataDiv(Data)
          {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
@@ -52,14 +52,12 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
       </Head>
-       <div className='row'>
-        <div className='card col-md-12'> 
+      <div className=' mt-3 row '>
+        <div className=' col-md-12'> 
         <div className='MainPageTitle'>
-          <h2 className='d-flex m-3 justify-content-center align-items-center'>
-              News From Bangladesh National Media
+          <h2 className=' d-flex justify-content-center align-items-center'>
+            Division wise news of bangladesh from local english news media 
           </h2>
-        
-
         </div>
         </div>
       </div>
@@ -69,10 +67,10 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <div className='b-block'>
         <div className='m-2'>
         
-        <h6 className='OptionTitle d-flex justify-content-center align-items-center'>Change the Division to see top news of last Week</h6>
+        <h6 className='OptionTitle d-flex justify-content-center align-items-center mb-4 mt-3'>Change the Division to see top news of last Week</h6>
         <form className='form-group d-flex justify-content-center align-items-center' onSubmit={handleSubmit}>
             <label className='d-block'>
-                Select the Division    <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> 
+            <div className='mb-3 '>Select the category   <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> </div>
             <select className='form-control SelectOption' value={divText} onChange={(e) => setDivText(e.target.value)}>
             <option value='Dhaka'>Dhaka</option>
             <option value='Chittagong'>Chottogram</option>
@@ -85,7 +83,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
             <option value='Noakhali'>Noakhali</option>
             
             </select>
-          <button className='btn CopyButton' type='submit'>Submit</button>
+          <button className='btn CopyButton mt-3' type='submit'>Submit</button>
 
 
             </label>
@@ -99,8 +97,17 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       
             </div>
       </div>
-      <div className='card'>
-        <hr/>
+      <div className='catNameMain'>
+      <div className=''>
+        <p className='d-flex justify-content-center align-items-center text-secondary cCat'>Current Division</p>
+        <div className='categoryName'>
+        <div className='d-flex justify-content-center align-items-center cCat2'>
+
+        <h1>{National.toUpperCase()}</h1>
+        </div>
+       </div>
+      </div>
+
       </div>
         
 
@@ -218,7 +225,7 @@ export async function getServerSideProps(context) {
       const data = res.data.articles;
       
     return {
-      props: {Data : data, National,},
+      props: {Data : data, National},
     }
   }
 

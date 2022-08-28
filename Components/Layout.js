@@ -6,7 +6,7 @@ import Loading from "./Loading";
 import nProgress from "nprogress";
 import  Router,{useRouter}  from "next/router";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {FaArrowAltCircleLeft} from 'react-icons/fa';
+
 
 
 
@@ -65,11 +65,7 @@ const Layout = ({children}) => {
         </div>
        
 
-        {loading ? <Loading/> :<div className="col-9 col-md-10"><button onClick={() => router.back()}>
-       
-               <FaArrowAltCircleLeft/>
-         
-          </button>   {children}</div>}
+        {loading ? <Loading/> :<div className="col-9 col-md-10"> {children}</div>}
          
 
        

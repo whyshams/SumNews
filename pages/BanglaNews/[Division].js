@@ -12,7 +12,7 @@ import Head from 'next/head';
 
 
 
-const Division = ({Data}) => {
+const Division = ({Data,Division}) => {
     
     const[banglaText,setBanglaText] = useState();
     const [summaryOn,setSummaryOn] = useState(false);
@@ -52,7 +52,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
          crossOrigin="anonymous"></script>
       </Head>
       <div className='row'>
-        <div className='card col-md-12'> 
+        <div className='col-md-12'> 
         <div className='MainPageTitle'>
           <h2 className=' m-3 d-flex justify-content-center align-items-center'>
             বিভাগ অনুযায়ী বাংলা সংবাদ
@@ -66,11 +66,11 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
             <div className='col-md-12'>
       <div className='b-block'>
         <div className='m-2'>
-        <h6 className='OptionTitle d-flex justify-content-center align-items-center'>Change the Division to see top news of last Week</h6>
+        <h6 className='OptionTitle d-flex justify-content-center align-items-center mt-3 mb-4'>বিভাগ পরিবর্তন করে উক্ত বিভাগের সর্বশেষ সংবাদ দেখুন</h6>
         
         <form className='form-group d-flex justify-content-center align-items-center' onSubmit={handleSubmit}>
             <label>
-                Select the Division   <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> 
+            <div className='mb-3 '>বিভাগ পরিবর্তন করুন  <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> </div>
             <select className='form-control SelectOption' value={banglaText} onChange={(e) => setBanglaText(e.target.value)}>
             <option value='ঢাকা'>ঢাকা</option>
             <option value='চট্টগ্রাম'>চট্টগ্রাম</option>
@@ -83,7 +83,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
             
             
             </select>
-          <button className='btn CopyButton' type='submit'>Submit</button>
+          <button className='btn CopyButton mt-3' type='submit'>Submit</button>
 
 
             </label>
@@ -100,9 +100,17 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
 
       </section>
      
-    <div className='card'>
-    
-        <hr/>
+      <div className='catNameMain'>
+      <div className=''>
+        <p className='d-flex justify-content-center align-items-center text-secondary cCat'>বর্তমান বিভাগ</p>
+        <div className='categoryName'>
+        <div className='d-flex justify-content-center align-items-center cCat2'>
+
+        <h1>{Division}</h1>
+        </div>
+       </div>
+      </div>
+
       </div>
        <section>
        <div className='second'>
@@ -222,6 +230,6 @@ export async function getServerSideProps(context) {
        
    
     return {
-      props: {Data : Data}, 
+      props: {Data : Data,Division}, 
     }
   }

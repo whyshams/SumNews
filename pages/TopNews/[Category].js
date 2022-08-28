@@ -14,7 +14,7 @@ import Head from 'next/head';
 
 
 
-const Category = ({Data}) => {
+const Category = ({Data,Category}) => {
     const {catData, setCatData,setCopied,setSumText} = useResultContext();
     const [cat,setCat] = useState('')
     setCatData(Data);
@@ -41,7 +41,7 @@ const indexOfFirstPost = indexOfLastPost - postsPerPage;
 const paginatedData = catData.slice(indexOfFirstPost, indexOfLastPost);
 
 const paginate = pageNumber => setCurrentPage(pageNumber);
-console.log(paginatedData)
+
 
 {/*src={res?.image?.thumbnail.contentUrl} */}
 
@@ -55,15 +55,24 @@ console.log(paginatedData)
      crossOrigin="anonymous"></script>
       </Head>
         <section>
+        <div className='row '>
+        <div className=' col-md-12'> 
+        <div className='MainPageTitle'>
+          <h2 className=' d-flex justify-content-center align-items-center'>
+            category wise  Latest News Around the world 
+          </h2>
+        </div>
+        </div>
+      </div>
         <div className='firtpart card'>
             <div className='row m-2'>
             <div className='col-md-12'>
       <div className=' d-block '>
-        <h3 className=' d-flex justify-content-center align-items-center'>Top News Around The World</h3>
-        <h6 className='OptionTitle d-flex justify-content-center align-items-center '>Change the category to see top news of that category</h6>
+        
+        <h6 className='OptionTitle d-flex justify-content-center align-items-center mb-4 mt-3'>Change the category to see top news of that category</h6>
         <form className=' form-group d-flex justify-content-center align-items-center' onSubmit={handleSubmit}>
             <label>
-                Select the category   <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> 
+            <div className='mb-3 '>Select the category   <IconContext.Provider value={{className:"fa-bounce"}}> <FaAngleDown/></IconContext.Provider> </div>
             <select className='form-control SelectOption' value={cat} onChange={(e) => setCat(e.target.value)}>
             <option value='World'>World News</option>
             <option value="World_Asia">-Asia</option>
@@ -88,7 +97,7 @@ console.log(paginatedData)
 
 
           </select>
-          <button className='btn CopyButton' type='submit'>Submit</button>
+          <button className='btn CopyButton mt-2' type='submit'>Submit</button>
           </label>
           </form>
           </div>
@@ -98,8 +107,17 @@ console.log(paginatedData)
 
         </section>
         
-        <div className='card'>
-        <hr/>
+        <div className='catNameMain'>
+      <div className=''>
+        <p className='d-flex justify-content-center align-items-center text-secondary cCat'>Current Category</p>
+        <div className='categoryName'>
+        <div className='d-flex justify-content-center align-items-center cCat2'>
+
+        <h1>{Category}</h1>
+        </div>
+       </div>
+      </div>
+
       </div>
         <section>
         <div className=''>
@@ -231,6 +249,6 @@ export async function getServerSideProps(context) {
     const Data = res.data.value;
   
     return {
-      props: {Data : Data},
+      props: {Data : Data,Category:Category},
     }
   }

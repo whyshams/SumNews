@@ -29,10 +29,10 @@ const indexOfFirstPost = indexOfLastPost - postsPerPage;
 const paginatedData = bdNewsData.slice(indexOfFirstPost, indexOfLastPost);
 
 const paginate = pageNumber => setCurrentPage(pageNumber);
-console.log(paginatedData)
+
 
   return (
-    <div className='scroll'>
+    <div className=''>
        <Head>
       <title>BD News || International </title>
       <meta name="description" content="Get the latest news of Bangladesh from the reputed News Journals around the world and summarize them in seconds with our summarizer tool.."/>
@@ -41,10 +41,10 @@ console.log(paginatedData)
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
       </Head>
-       <div className='row'>
-        <div className='card col-md-12'> 
-        <div className='MainPageTitle'>
-          <h2 className='d-flex m-3 justify-content-center align-items-center'>
+       <div className='row intmain '>
+        <div className=' '> 
+        <div className='intMainTitle'>
+          <h2 className='MainPageTitle text-secondary d-flex m-3 justify-content-center align-items-center'>
             News Of Bangladesh In International Media
           </h2>
         </div>
@@ -133,13 +133,13 @@ console.log(paginatedData)
                         </div>
                          
                         ))}
-                        <div className='col-md-12'>
-                        <div className='pagination d-flex justify-content-center mt-3 align-items-center'>
-                <Pagination
-                     postsPerPage={postsPerPage}
-                      totalPosts={bdNewsData.length}
-                      paginate={paginate}
-                  />
+                        <div className=''>
+                        <div className='pagination d-flex flex-wrap justify-content-center mt-3 align-items-center'>
+                                  <Pagination
+                                          postsPerPage={postsPerPage}
+                                         totalPosts={bdNewsData.length}
+                                           paginate={paginate}
+                                    />
 
                 </div>
 

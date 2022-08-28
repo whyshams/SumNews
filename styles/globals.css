@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 body{
     background-color: white;
     font-family: 'Poppins', sans-serif;
+}
+.intmain{
+    background: black;
+    margin-left: -30px;
+    margin-right: -15px;
 }
 .Home{
     height: 100vh;
@@ -16,6 +22,44 @@ body{
     font-size: 18px;
     font-weight: 500;
 }
+.catNameMain{
+    background: black;
+    color: white;
+    margin-top: 90px;
+    margin-left: -32px;
+    margin-right: -15px;
+    animation-name: content;
+    animation-duration: 1000ms;
+
+    
+}
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+}
+.OptionTitle{
+    font-weight: bold;
+}
+.MainPageTitle{
+    margin-top:50px;
+    font-family: 'Aboreto', cursive;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.categoryName{
+    padding: 40px;
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-family: 'Abril Fatface', cursive;
+    padding-bottom: 60px;
+   
+}
+.cCat{
+    font-size: 14px;
+    padding-top:20px ;
+}
+
 
 .menu{
     height: 100vh;
@@ -132,6 +176,11 @@ body{
     font-size: 13px;
     margin-left: 20px;
 }
+.intMainTitle{
+    padding: 20px;
+    
+}
+
 .nationalImage{
     height: auto;
     margin-top: 20px;
@@ -241,6 +290,7 @@ body{
 
 .SelectOption {
     width: 300px;
+    border-color: black;
 }
 .copyLink{
     text-decoration: none;
@@ -356,6 +406,7 @@ body{
   
 
 @media only screen and (max-width: 600px) {
+
     .nav-button{
         margin: 0;
         margin-top: 40px;
@@ -363,6 +414,7 @@ body{
         color: white;
     background-color:black;
     border-bottom: 1px solid white;
+        padding-left: 3px;
     }
     .nav-button-active {
         margin: 0;
@@ -440,6 +492,7 @@ body{
 }
 .OptionTitle{
     font-size: 6px;
+    font-weight: bold;
 }
 .SumInput{
     width: 250px;
@@ -489,6 +542,9 @@ body{
 .paraGraph{
     font-size: 15px;
     
+}
+.cCat{
+    font-size: 10px;
 }
     
   }

@@ -369,6 +369,8 @@ body{
     animation-timing-function: ease-out;
     
     animation-direction: normal;
+    margin-left: 0;
+    padding-left: 0;
 
   }
   @keyframes example {

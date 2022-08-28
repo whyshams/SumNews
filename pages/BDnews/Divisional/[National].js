@@ -26,7 +26,7 @@ const {bdNewsDataDiv,setBdNewsDataDiv,setCopied,setSumText} = useResultContext()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        router.push(`/BDnews/${divText}`);
+        router.push(`/BDnews/Divisional/${divText}`);
         
     }
   

@@ -31,6 +31,15 @@ const Summarize = () => {
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
           </Head>
+          <div className=' mt-3 row '>
+        <div className=' col-md-12'> 
+        <div className='MainPageTitle'>
+          <h2 className=' d-flex justify-content-center align-items-center'>
+            Summarizer Tool 
+          </h2>
+        </div>
+        </div>
+      </div>
 
           <div className='sumInput justify-content-center align-items-center d-flex'>
             <div className='justify-content-center align-items-center d-flex'>

@@ -48,7 +48,8 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         <meta name="description" content="বিভাগ অনুযায়ী বাংলাদেশের প্রত্যেক দৈনিক পত্রিকা এবং অনলাইন পত্রিকার সর্বশেষ বাংলা সংবাদ"/>
         <meta name="keywords" content="Bangla News,Bd News,Bd,Bangladesh News,Divisional Bangla News,Bangla,News,সংবাদ, বাংলা সংবাদ,বিভাগীয় সংবাদ, বাংলাদেশ,বাংলাদেশ সংবাদ"/>
         <meta name="author" content="Nuren Shams Chowdhury"/>
-        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
+     crossorigin="anonymous"></script>
       </Head>
       <div className='row'>
         <div className='col-md-12'> 

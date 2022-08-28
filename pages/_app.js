@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
         `
       }
     </Script>
+    <h1></h1>
 
         <Component {...pageProps} />
     </ResultContextProvider>

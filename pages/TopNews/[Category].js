@@ -51,8 +51,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         <title>World News</title>
         <meta name="description" content="Get the latest news around the World according to your category choice and summarize them in seconds with our summarizer tool.."/>
         <meta name="keywords" content="World News, current news, news, category, sumnews,sumnewsbd" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossOrigin="anonymous"></script>
+        
       </Head>
         <section>
         <div className='row '>

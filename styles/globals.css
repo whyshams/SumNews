@@ -441,6 +441,7 @@ body{
     }
     .intMedia{
         font-size: 6px;
+        margin-left: 0;
     }
     .multi-ripple {
         width: 3.6rem;

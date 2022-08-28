@@ -50,6 +50,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         <meta name="author" content="Nuren Shams Chowdhury"/>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
+     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
       </Head>
       <div className='row'>
         <div className='col-md-12'> 
@@ -112,6 +113,14 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
+      <amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="2556220158"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
        <section>
        <div className='second'>
           

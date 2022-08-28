@@ -29,7 +29,7 @@ const Summarize = () => {
             <meta name='keywords' content='summarizer,summarize,news summarize,summarize news,summarizer tool,summarizer app,article summarize,article,summarization,summary,news summary' />
             <meta name="author" content="Nuren Shams Chowdhury"/>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
           </Head>
           <div className=' mt-3 row '>
         <div className=' col-md-12'> 

@@ -11,3 +11,7 @@ module.exports = {
     domains: ['www.bing.com'],
   },
 }
+
+module.exports ={
+  useFileSystemPublicRoutes: false,
+}

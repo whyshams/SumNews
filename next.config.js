@@ -12,6 +12,3 @@ module.exports = {
   },
 }
 
-module.exports ={
-  useFileSystemPublicRoutes: false,
-}

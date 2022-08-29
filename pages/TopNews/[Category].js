@@ -214,13 +214,17 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
              
     ))}
             </div> : <h2>Loading</h2> }
-            <div className='ads'>
+            {/*
+             <div className='ads'>
           <ins className="adsbygoogle"
             style={{display:"block"}}
              data-ad-format="autorelaxed"
             data-ad-client="ca-pub-5159189580385319"
            data-ad-slot="8510458257"></ins>
           </div>
+            
+            */}
+           
             <div className='row'>
               <div className='col-md-12'>
               <div className='pagination d-flex justify-content-center align-items-center'>

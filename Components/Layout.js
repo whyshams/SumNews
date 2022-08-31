@@ -3,8 +3,11 @@ import Head from 'next/head';
 import { useState,useEffect } from "react";
 import NavBar from "./NavBar";
 import Loading from "./Loading";
+import Footer from './Footer';
 import nProgress from "nprogress";
 import  Router,{useRouter}  from "next/router";
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -67,13 +70,13 @@ const Layout = ({children}) => {
         </div>
        
 
-        {loading ? <Loading/> :<div className="col-9 col-md-10"> {children}</div>}
-         
+        {loading ? <Loading/> :<div className="col-9 col-md-10"> {children} </div>}
 
-       
-       
-       
      </div>
+     <footer className='col-md-12 col-12'>
+          <Footer/>
+      </footer> 
+
 </div>
   )
 }

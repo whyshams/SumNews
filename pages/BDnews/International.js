@@ -8,6 +8,7 @@ import Pagination from '../../Components/Pagination';
 import Head from 'next/head';
 
 
+
 const International = ({Data}) => {
 
     const {bdNewsData,setBdNewsData,setCopied,setSumText} = useResultContext();
@@ -31,7 +32,7 @@ const International = ({Data}) => {
 }, []);
     {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
-const [postsPerPage] = useState(8);
+const [postsPerPage] = useState(10);
 
 const indexOfLastPost = currentPage * postsPerPage;
 const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -58,11 +59,23 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         </div>
         </div>
       </div>
-      <div className='card'>
-        <h4>Ads:</h4>
+      <hr className='text-muted'/>
+      <div className=''>
+      <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
       
         
       </div>
+      <hr className='text-muted'/>
+
+      
         <div>
         {
                       paginatedData.map((data)=>(
@@ -76,7 +89,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                             <div className='col-md-8 col-12'>
                             <div className='bdInt'>
                                 <div >
-                                <h4 className='bdInTitle mb-2 d-flex justify-content-center align-items-center'>{data.title}</h4>
+                                <h4 className='bdInTitle fontFat mb-2 d-flex justify-content-center align-items-center'>{data.title}</h4>
                                 <p className='bdInDesc'>{data.description}. . . . .</p>
                                
 
@@ -132,7 +145,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                            
                                
                             
-                          <hr/>
+                          <hr className='text-muted'/>
                 
                 
                             
@@ -143,15 +156,9 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                         </div>
                          
                         ))}
-                      <div className='ads d-none d-md-flex justify-content-center alig-items-center'>
-          <ins className="adsbygoogle"
-            style={{display:"block"}}
-             data-ad-format="autorelaxed"
-            data-ad-client="ca-pub-5159189580385319"
-           data-ad-slot="8510458257"></ins>
-          </div>
-                        <div className=''>
-                        <div className='pagination d-flex flex-wrap justify-content-center mt-3 align-items-center'>
+                     
+                        <div className='mt-3'>
+                        <div className='pagination  d-flex flex-wrap justify-content-center alig-items-center'>
                                   <Pagination
                                           postsPerPage={postsPerPage}
                                          totalPosts={bdNewsData.length}
@@ -161,6 +168,15 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                 </div>
 
                         </div>
+                        <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
                         
         </div>
     </div>

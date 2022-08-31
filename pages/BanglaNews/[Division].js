@@ -12,6 +12,7 @@ import Head from 'next/head';
 
 
 
+
 const Division = ({Data,Division}) => {
     
     const[banglaText,setBanglaText] = useState();
@@ -37,6 +38,7 @@ const Division = ({Data,Division}) => {
 }, []);
 
 
+
         {/* Pagination algo*/}
 const [currentPage, setCurrentPage] = useState(1);
 const [postsPerPage] = useState(8);
@@ -56,6 +58,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         <meta name="keywords" content="Bangla News,Bd News,Bd,Bangladesh News,Divisional Bangla News,Bangla,News,সংবাদ, বাংলা সংবাদ,বিভাগীয় সংবাদ, বাংলাদেশ,বাংলাদেশ সংবাদ"/>
         <meta name="author" content="Nuren Shams Chowdhury"/>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"></script>
+        
       </Head>
       <div className='row'>
         <div className='col-md-12'> 
@@ -66,6 +69,8 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         </div>
         </div>
       </div>
+
+      <hr className='text-muted'/>
       <section>
       <div className='bdCatFirstPart card'>
       <div className='row'>
@@ -105,6 +110,10 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
     </div>
 
       </section>
+      <hr className='text-muted'/>
+
+      
+      
      
       <div className='catNameMain'>
       <div className=''>
@@ -118,6 +127,19 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
+      <hr className='text-muted'/>
+
+      <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
+      <hr className='text-muted'/>
+
     
        <section>
        <div className='second'>
@@ -137,7 +159,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           </div>
           <div className='col-md-8 '>
           <div className='col-12 nationalContent'>
-            <h3 className='nationalTitle mb-2 d-flex justify-content-center align-items-center'>{data.title}</h3>
+            <h3 className='nationalTitle fontFat mb-2 d-flex justify-content-center align-items-center'>{data.title}</h3>
             
             
             
@@ -185,15 +207,11 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
          
       ))}
           </div>
-          <div className='ads d-none d-md-flex justify-content-center alig-items-center'>
-          <ins className="adsbygoogle"
-            style={{display:"block"}}
-             data-ad-format="autorelaxed"
-            data-ad-client="ca-pub-5159189580385319"
-           data-ad-slot="8510458257"></ins>
-          </div>
+          
+      <hr className='text-muted'/>
+
           <div className='col-md-12'>
-                          <div className='pagination d-flex justify-content-center mt-3 align-items-center'>
+                          <div className='pagination mt-3 d-flex justify-content-center mt-3 align-items-center'>
                   <Pagination
                        postsPerPage={postsPerPage}
                         totalPosts={Data.length}
@@ -203,6 +221,16 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                   </div>
   
                           </div>
+                          <hr className='text-muted'/>
+                          <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
        
           </div>
   

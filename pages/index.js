@@ -13,18 +13,29 @@ export default function Home() {
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"
      crossOrigin="anonymous"></script>
       </Head>
-      <div className='lazy col-md-12 align-items-center mt-5'>
-        <h1 className='d-flex justify-content-center align-items-center'>Find latest news of bangladesh and around the world</h1>
-        <div>
-          <h2 className='d-flex justify-content-center align-items-center'>Too lazy to read the whole news?</h2>
-          <div>
-            <h2 className='d-flex justify-content-center align-items-center '>Summarize the article or news in seconds in our</h2>
-          </div>
-          <div className='m-5 '>
-              <Link href='/Summarize'><div className='CopyButton d-flex justify-content-center align-items-center'>Summarizer Tool</div></Link>
-          </div>
-        </div>
+      <div className=' col-md-12 align-items-center mt-5'>
+       <div>
+        <h1 className='fontType frontLogo d-flex justify-content-center align-items-center'>sum(NEWS)</h1>
+       </div>
+       
+       <div className='d-md-flex d-inline-block justify-content-center align-items-center mt-5'>
+        <p className='fontBang frontPara text-dark'>Is here to make news consumption as easy as possible!</p>
+       </div>
       </div>
+      <div className='d-flex justify-content-center align-items-center mt-5'>
+          <h4 className='text-dark'>In Sum News, You can :</h4>
+      </div>
+      <div className='d-flex justify-content-center align-items-center mt-2'>
+          <p>Summarize any English Article or News in <Link href='/Summarize'><span className='frontLink'>Summarizer Tool</span></Link> </p>
+      </div>
+      <div className='d-flex justify-content-center align-items-center mt-2'>
+          <p>Find Out latest <Link href='/TopNews/World'><span className='frontLink'>World News</span></Link></p>
+      </div>
+      <div className='d-flex justify-content-center align-items-center mt-2'>
+          <p>Surf the latest news of Bangladesh across <Link href='/BDnews/International'><span className='frontLink'>World Media</span></Link> and Local <Link href='/BanglaNews/ঢাকা'><span className='frontLink'>বাংলা</span></Link> or English news agencies respectively.</p>
+      </div>
+
+
       
       
     </div>

@@ -1,19 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 
 body{
     background-color: white;
     font-family: 'Poppins', sans-serif;
 }
+.menuIcon{
+    height:35px;
+    width: 35px;
+}
+.Home p{
+    font-size: 22px;
+    margin-top: 20px;
+}
+.frontPara{
+    font-size: 30px;
+}
+.frontLink{
+    text-decoration: none;
+    color:blue;
+    font-weight: bold;
+}
+.fontBang{
+    font-family: 'Bangers', cursive;
+}
+.frontLogo{
+    font-size: 80px;
+}
+.fontFat{
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+}
+
+.fontType{
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+.lazy{
+    font-family:'Aboreto', cursive ;
+    letter-spacing: 2px;
+}
+.aboutContent{
+    font-size: 22px;
+}
+.introSum{
+    font-weight: bold;
+    font-family:'Poppins', sans-serif;
+}
 .intmain{
     background: black;
-    margin-left: -30px;
-    margin-right: -15px;
+   
 }
 .Home{
     height: 100vh;
 }
+.Footer {
+    background: black;
+    color: white;
+    border:none ;
+    z-index: -9999;
+    
+    
+    
+}
+
 .bdCatSecondPart{
     background: white;
     z-index: 10000;
@@ -96,6 +151,8 @@ body{
     border-radius: 10px;
 }
 .Nav{
+    
+    margin-top: 80px;
     animation-name: example;
     animation-duration: 1000ms;
     animation-direction: normal;
@@ -334,6 +391,13 @@ body{
 .navIconNat {
     margin-left: 50%;
 }
+.navIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 52px;
+    margin-top: 0;
+}
 .multi-ripple {
     width: 5.2rem;
     height: 5.2rem;
@@ -408,7 +472,16 @@ body{
   
 
 @media only screen and (max-width: 600px) {
-
+    .frontLogo{
+        font-size: 55px;
+    }
+    .frontPara{
+        font-size: 25px;
+    }
+    .black{
+        color: black;
+    }
+  
     .nav-button{
         margin: 0;
         margin-top: 40px;
@@ -417,6 +490,9 @@ body{
     background-color:black;
     border-bottom: 1px solid white;
         
+    }
+    .copyright{
+        font-size:9px;
     }
     .nav-button-active {
         margin: 0;
@@ -548,6 +624,9 @@ body{
 }
 .cCat{
     font-size: 10px;
+}
+.aboutContent{
+    font-size: 16px;
 }
     
   }

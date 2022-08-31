@@ -6,6 +6,7 @@ import Head from 'next/head';
 
 
 
+
 const Summarize = () => {
     const {sumData,setSumInput,sumText,setSumText,Loading,sumError} = useResultContext();
 
@@ -17,7 +18,14 @@ const Summarize = () => {
         setSumText('')
       }
 
-     
+      useEffect(() => {
+        var ads = document.getElementsByClassName("adsbygoogle").length;
+        for (var i = 0; i < ads; i++) {
+          try {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          } catch (e) { }
+        }
+  }, []);
   
       
     
@@ -28,6 +36,8 @@ const Summarize = () => {
             <meta name='description' content='Copy and Paste any English news or article link and summarize the whole article into 3-4 lines in seconds...' />
             <meta name='keywords' content='summarizer,summarize,news summarize,summarize news,summarizer tool,summarizer app,article summarize,article,summarization,summary,news summary' />
             <meta name="author" content="Nuren Shams Chowdhury"/>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159189580385319"></script>
+
            
           </Head>
           <div className=' mt-3 row '>
@@ -102,12 +112,22 @@ const Summarize = () => {
                     </div>
                   </div> : <div className='instruSum '>
                    <div className='intruSum1 d-flex justify-content-center align-items-center'>paste any english news or article Link in that input field and submit</div> 
-                   <div className='intruSum2 d-flex justify-content-center align-items-center'>Wait 2-3 seconds after submitting</div>
+                   
                     </div>
                 }
+
            
     
             </div>
+            <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
     
           </div>
         </div>

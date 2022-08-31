@@ -1,12 +1,14 @@
 import React,{useState} from 'react';
 import Link from "next/link";
 import { useRouter } from 'next/router';
-import {FaAngleDown} from 'react-icons/fa';
+import {FaAngleDown,FaGlobeAsia} from 'react-icons/fa';
 import { IconContext } from "react-icons";
+import { TbLetterB,TbLetterD } from "react-icons/tb";
 
 const NavBar = () => {
   const [bdOpen , setBdOpen] =useState(false);
   const [bdNatOpen,setBdNatOpen] = useState(false)
+  const [homeOpen,setHomeOpen] = useState(false)
 
 
   
@@ -20,10 +22,15 @@ const NavBar = () => {
 
 
     <div className='menu d-block '>
+    <Link href='/'><div onClick={() => setHomeOpen(true)} className={ homeOpen ? 'nav-button-active ':'nav-button '} ><span className='fontType'>sum(NEWS)</span></div></Link>
         <div className='Nav '>
-        <Link href='/TopNews/World'><div  className={router.query.Category ? 'nav-button-active ':'nav-button '} ><span> World News</span></div></Link>
+        
+
+        <Link href='/TopNews/World'><div  className={router.query.Category ? 'nav-button-active ':'nav-button '} ><span className='d-flex d-md-none justify-content-center align-items-center'><IconContext.Provider value={{className:"menuIcon "}}> <FaGlobeAsia/></IconContext.Provider> </span><span className='d-md-flex d-none'> World News</span></div></Link>
        {/* Bangladesh */}
-       <div onClick={() => setBdOpen(!bdOpen)} className={bdOpen?'nav-button-active':'nav-button'}><span>Bangladesh</span><IconContext.Provider value={{className:"fa-beat-fade navIcon"}}> <FaAngleDown/></IconContext.Provider> </div>
+       <div onClick={() => setBdOpen(!bdOpen)} className={bdOpen?'nav-button-active':'nav-button'}><div className='d-flex d-md-none'><IconContext.Provider value={{className:"menuIcon text-success"}}> <TbLetterB/></IconContext.Provider>
+       <IconContext.Provider value={{className:"menuIcon text-danger"}}> <TbLetterD/></IconContext.Provider>
+       </div><span className='d-md-block d-none'>Bangladesh</span><span  className=''><IconContext.Provider value={{className:" fa-bounce mt-2  d-flex justify-content-center align-items-center navIcon"}}> <FaAngleDown/></IconContext.Provider></span> </div>
        {
         bdOpen &&
           
@@ -32,7 +39,7 @@ const NavBar = () => {
         <Link href='/BDnews/International'><div  className={router.asPath == "/BDnews/International" ? 'nav-button-active':'nav-button intMedia'} ><span >International Media</span></div></Link>
         
         {/* National Media */}
-       <div onClick={() => setBdNatOpen(!bdNatOpen)} className={bdNatOpen?'nav-button-active':'nav-button'}><span>National Media</span><IconContext.Provider value={{className:"fa-beat-fade navIconNat"}}> <FaAngleDown/></IconContext.Provider></div>
+       <div onClick={() => setBdNatOpen(!bdNatOpen)} className={bdNatOpen?'nav-button-active':'nav-button'}><span>Local Media(en)</span><IconContext.Provider value={{className:"fa-bounce mt-2 navIconNat"}}> <FaAngleDown/></IconContext.Provider></div>
 
         {bdNatOpen &&  <div className='submenu2'>
          <Link href='/BDnews/Divisional/Dhaka'><div  className={router.query.National ? 'nav-button-active':'nav-button'} ><span >Divisional</span></div></Link>
@@ -52,29 +59,16 @@ const NavBar = () => {
            </Link>
  
         </div>
-
-            
-          
-        
-          
-           
-        
-       }
+}
        
         <div>
         <Link href='/Summarize'><div  className={router.asPath == '/Summarize' ? 'nav-button-active':'nav-button'} ><span >Summarizer</span></div></Link>
 
         </div>
       
-        
-       
-        </div>
-        
-
-        
-
-
-    </div>
+         </div>
+         
+       </div>
     </>
   )
 }

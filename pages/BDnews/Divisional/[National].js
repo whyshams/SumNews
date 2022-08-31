@@ -12,6 +12,7 @@ import Head from 'next/head';
 
 
 
+
 const National = ({Data,National}) => {
   const router = useRouter();
 const {bdNewsDataDiv,setBdNewsDataDiv,setCopied,setSumText} = useResultContext();
@@ -69,6 +70,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         </div>
         </div>
       </div>
+      <hr className='text-muted'/>
       <div className='bdCatFirstPart card'>
       <div className='row'>
             <div className='col-md-12'>
@@ -105,6 +107,8 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       
             </div>
       </div>
+      <hr className='text-muted'/>
+
       <div className='catNameMain'>
       <div className=''>
         <p className='d-flex justify-content-center align-items-center text-secondary cCat'>Current Division</p>
@@ -117,7 +121,19 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       </div>
 
       </div>
+      <hr className='text-muted'/>
+
+      <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
         
+      <hr className='text-muted'/>
 
     
       <div className='bdNatSecond'>
@@ -136,7 +152,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         </div>
         <div className='col-md-8 '>
         <div className='col-12 nationalContent'>
-          <h3 className='nationalTitle d-flex justify-content-center align-items-center mb-2'>{data.title}</h3>
+          <h3 className='nationalTitle fontFat d-flex justify-content-center align-items-center mb-2'>{data.title}</h3>
           
           <div><p className='nationalSummary'><strong>Summary :</strong> {data.summary}</p></div>
 
@@ -183,15 +199,11 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         
        
     ))}
-      <div className='ads d-none d-md-flex justify-content-center alig-items-center'>
-          <ins className="adsbygoogle"
-            style={{display:"block"}}
-             data-ad-format="autorelaxed"
-            data-ad-client="ca-pub-5159189580385319"
-           data-ad-slot="8510458257"></ins>
-          </div>
+      
+      <hr className='text-muted'/>
+
    <div className='col-md-12'>
-                        <div className='pagination d-flex justify-content-center mt-3 align-items-center'>
+                        <div className='pagination mt-3 d-flex justify-content-center mt-3 align-items-center'>
                 <Pagination
                      postsPerPage={postsPerPage}
                       totalPosts={Data.length}
@@ -201,6 +213,16 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
                 </div>
 
                         </div>
+                        <hr className='text-muted' />
+                        <div className='d-flex justify-content-center align-items-center'>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-5159189580385319"
+     data-ad-slot="4853218617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+      </div>
       
 
      
